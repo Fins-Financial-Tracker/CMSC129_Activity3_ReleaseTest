@@ -108,7 +108,7 @@ It is a purpose-built platform designed to connect service seekers and service p
 | Actual Result     | Admin can view and decide what to do with reports successfully Reports page. The Resolve and Dismiss actions functioned correctly and updated the report status. However, there are some minor usability issues were observed: The “View” (eye icon) button did not appear to perform any visible action. The trash icon was initially interpreted as a delete function, but it actually marks reports as “Dismissed.” After resolving a report, the Resolve button disappears, while dismissed reports still retain some action buttons, creating inconsistent behavior. The moderation controls may be confusing for first-time users/admins due to unclear icon meanings and inconsistent UI feedback.|
 | Pass / Fail       | Pass ✅ | 
 
-# Scenario-Based Testing
+## Scenario-Based Testing
 
   ### Scenario #1: Service Seeker Creates a Tutoring Listing
   
@@ -153,6 +153,31 @@ It is a purpose-built platform designed to connect service seekers and service p
   | 5 | Go through the reports' details |The system should show more details about the selected report when the "View" or eye icon is clicked. | ❌ Fail | The View button did not show any visible action. |
   | 6 | Resolve a report | The selected report should be marked as resolved, and the report status/actions should update properly. | ✅ Pass | |
   | 7 | Dismiss a report | The selected report should be marked as dismissed. | ✅ Pass | |
+
+  ## Summary
+
+  ### i. Testing Summary
+  
+  For the requirements-based testing, a total of 10 requirements were tested, out of which 2 failed. The failed requirements were related to the UP Mail sign-in feature and service listing visibility. For the UP Mail sign-in, the sign-in button did not work, which prevented users from logging in through the expected UP Mail authentication. For the service listing visibility, the listing was successfully created and appeared on the user’s **My Listings** page, but it did not show up on the public Listings page. Deleting listings also displayed an error message.
+  
+  For the scenario-based testing, three user scenarios were tested: service seeker, service provider, and admin. The service seeker scenario partially passed. The user was able to manually access the platform, create a listing, view it under **My Listings**, edit it, and use search and filter features. However, the UP Mail sign-in failed and the created listing did not appear on the public Listings page. The service provider scenario passed, as the user was able to search and filter listings, apply to a listing, and view the application under a pending status. The admin scenario also passed, with the admin being able to view dashboard statistics and manage reports, though some minor usability and visual issues were noted.
+
+ ### ii. Conclusion
+
+  Based on the release testing results, the application is not yet fully ready for release. While most of the core features are functional, there are still issues that affect important user flows. The UP Mail sign-in issue is significant because the app is intended for the UPV community, and users are expected to sign in using their UP Mail. The listing visibility issue is also important because service providers may not be able to discover newly created listings if they do not appear on the general Listings page.
+
+  The application may be ready for further internal testing or limited user testing, but the failed login and listing management features should be fixed before the system is fully released to users.
+
+### iii. Remarks
+
+  Most of the app’s main features worked properly during testing, especially provider discovery, applying to listings, messaging, reporting, and admin report management. However, some UI/UX issues were observed. In the admin dashboard, the statistics cards/icons looked similar to clickable buttons, even though they were not interactive. The dashboard statistics also had a noticeable loading delay after refreshing the page. In the Reports page, the "View" or eye icon did not show any visible action, and the trash icon was confusing because it looked like a delete button, even though it was used to technically just dismiss a report.
+
+  Overall, the app has a clear purpose and useful features, but some important bugs and usability issues should still be addressed before release.
+  
+
+  
+
+  
   
 
   
